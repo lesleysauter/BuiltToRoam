@@ -1,0 +1,15 @@
+:root{
+    --white: #ffffff;
+    --grey: #aaaaaa;
+    --darkblue: #4b778d;
+    --lightblue: #28b5b5;
+    --lightgreen: #8fd9a8;
+    --yellowgreen: #d2e69c;
+  }
+
+
+body {
+    background-color: var(--white);
+    color: var(--darkblue);
+    min-height: 100vh;
+  }
