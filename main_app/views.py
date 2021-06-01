@@ -39,7 +39,9 @@ class Signup(View):
             login(request, user)
             Profile.objects.create(
                 user=request.user, 
-                # name="New User", 
+                first_name = request.POST.get("first_name"),
+                last_name = request.POST.get("last_name"),
+                email = request.POST.get("email"),
                 )
             return redirect(f"/profile/{user.pk}")
         else:
@@ -56,7 +58,7 @@ class Signup(View):
 class ShowProfile(View):
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
-        context = {"user": user}
+        context = {"user": user, "first_name": Profile.objects.filter(first_name=user.profile.first_name)}
         return render(request, "profile.html", context)
 
     def form_valid(self, form):
