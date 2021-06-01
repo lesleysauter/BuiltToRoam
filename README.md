@@ -24,31 +24,38 @@ User Profile Page:
 4. If the user clicks on the Logout link, they will be directed to the landing page. 
 
 Favorite Trails Page:
-1.
-2.
-3.
+1. This page will show all of the trails that the current user has clicked the "heart" attached to said trail.
+2. It allows the user to revisit all of the trails the user has either visited already or is interested in.
+3. The user can view the map of each trail and see the name, location, rating, difficulty, and length.
+4. The ability to unfavorite a trail will be available by clicking the "heart" attached to said trail again. This will then remove that trail from the user's favorite trails list, and it will not appear on their favorite trails any longer. 
+5. This page will allow a user to view future events for the trail(s) selected by clicking the "View future events for this trail" button. 
 
 Trail Category Show Page
-1.
-2.
-3.
+1. On the landing page there is a gallery of trail categories available to the users to select from to get a more refined search of a trail that they are looking for. 
+2. Once a user clicks on a trail category it will show a list of different trails that are in that category for the user to interact with. 
+3. This page will allow a user to view future events for the trail(s) selected by clicking the "View future events for this trail" button. 
 
 Tips For Safe Exploring Page
-1.
-2.
-3.
+1. This page displays a list of resource links for the user to click on that gives informational tips on how to plan for hikes, how to hike alone safely, and new to hiking tips. These links direct them to another page outside of this site.
+2. A checklist is provided on the page to help users plan for their hikes and know what to bring along to fit their needs.
+3. This page is available to users who don't already have an account. 
 
-Plan A Community Hike Page
-1.
-2.
-3.
+Create A Community Hike Page
+1. When a user clicks on "create an event" button on a trail, it directs them to this page to input information needed to create a community hike. 
+2. The user is required to input a description of community hike, date, and time. 
+3. Once the user is finished inputting the information, they will then click submit to generate the community hike. 
+4. The name of trail, location, and map of the selected trail prepopulates on this page for them based on the trail they selected "create an event" buttom from. 
 
 View Future Community Hike
-1.
-2.
-3.
+1. This page will display all of the information about the future community hike that the user who created submitted.
+2. Information that will display is the name of trail, location, map, date, time, and number of users RSVP'ed.
+3. If the user that created this event is viewing this page, they will be able to delete the event by clicking on the "Delete event" button.
 
 
 # Planning
 
 Wireframes: https://lesleysauter291576.invisionapp.com/freehand/Capstone-Project-4zIuxzOJp
+
+Technologies To Be Used: Django, Python, and PostgreSQL.
+
+ERD:  ERD.drawio file
