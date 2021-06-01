@@ -3,34 +3,17 @@
 
 {% block content %}
 
-{% comment %} <div class="auth-box">
-    <form method="post" action="{% url 'customlogin' %}">
-        {% csrf_token %}
-    
-        <h2>Log In</h2>
-    
-        <p> Email:
-            <input type="text" name="username" placeholder="username">
-        </p>
-        <p> Password:
-            <input type="password" name="password" placeholder="password">
-        </p>
-    
-        <input type="submit" value="Log In" />
-    </form>
-
-
     <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
     
         <h2>Sign up</h2>
 
-        {{ form.errors }}
+        {% comment %} {{ form.errors }}
         <form method="post" action="{% url 'signup' %}">
             {% csrf_token %} {{form.as_p}}
             <input type="submit" value="Sign up" />
             <input type="hidden" value="{{ next }}" name="next" />
-        </form>
+        </form> {% endcomment %}
 
         <p> First name:
             <input type="text" name="first_name" placeholder="Bob">
@@ -56,14 +39,8 @@
             <input type="password" name="password2" placeholder="password">
         </p>
 
-    
-       
-    
         <input type="submit" value="Sign Up" />
     </form>
-</div> {% endcomment %}
-
-
-
 
 {% endblock %}
+

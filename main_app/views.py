@@ -3,8 +3,7 @@ from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 
-
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -15,13 +14,10 @@ from .models import Profile
 class Home(TemplateView):
     template_name = "home.html"
 
-    # def get(self, request):
-    #     return HttpResponse("Capstone Project Home")
-
 
 class Login(View):
     def post(self, request):
-        email = request.POST['username']
+        email = request.POST['email']
         password = request.POST['password']
         user = authenticate(request, email=email, password=password)
         if user is not None:
@@ -30,6 +26,9 @@ class Login(View):
         
         else:
             return HttpResponse("Unable to login!", content_type="text/plain")
+
+    def get(self,request):
+        return render(request, "login.html")
 
 
 class Signup(View):
@@ -40,11 +39,33 @@ class Signup(View):
             login(request, user)
             Profile.objects.create(
                 user=request.user, 
-                name="New User", 
+                # name="New User", 
                 )
             return redirect(f"/profile/{user.pk}")
         else:
+            print(request.POST, form.errors)
             return HttpResponse("Unable to create profile!", content_type="text/plain")
+
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "registration/signup.html", context)
+
+
+
+class ShowProfile(View):
+    def get(self, request, pk):
+        user = User.objects.get(pk=pk)
+        context = {"user": user}
+        return render(request, "profile.html", context)
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(Profile, self).for_valid(form)
+
+
+
+            
 
 
 
