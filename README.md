@@ -19,11 +19,36 @@ Sign Up Page:
 
 User Profile Page:
 1. If the user clicks on the link for their profile, they will be directed to their profile page which shows their first name, last name, and email address.
-2. If the user needs to update any of those fields, they can click on the button to the right of the field and enter in their new preffered information. This will automatically update their account to hold the new information. 
+2. If the user needs to update any of those fields, they can click on the button to the right of the field and enter in their new preferred information. This will automatically update their account to hold the new information. 
 3. On the navigation bar of this page, the user can click on the link back to their favorite trails, the link to logout of their account, and the site name can be clicked to go back to the landing page. 
 4. If the user clicks on the Logout link, they will be directed to the landing page. 
 
 Favorite Trails Page:
 1.
+2.
+3.
+
+Trail Category Show Page
+1.
+2.
+3.
+
+Tips For Safe Exploring Page
+1.
+2.
+3.
+
+Plan A Community Hike Page
+1.
+2.
+3.
+
+View Future Community Hike
+1.
+2.
+3.
 
 
+# Planning
+
+Wireframes: https://lesleysauter291576.invisionapp.com/freehand/Capstone-Project-4zIuxzOJp
