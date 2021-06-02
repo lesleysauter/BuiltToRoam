@@ -1,4 +1,4 @@
-:root{
+:root {
     --white: #ffffff;
     --grey: #aaaaaa;
     --darkblue: #4b778d;
@@ -17,3 +17,7 @@ body {
 .signupform {
     text-align: center;
   }
+
+
+  /* sign up page background: */
+  /* https://cache.desktopnexus.com/thumbseg/1953/1953237-bigthumbnail.jpg */
