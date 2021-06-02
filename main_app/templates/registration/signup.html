@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<div class="signupform">
+
     <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
     
@@ -15,16 +17,16 @@
             <input type="hidden" value="{{ next }}" name="next" />
         </form> {% endcomment %}
 
-        <p> First name:
-            <input type="text" name="first_name" placeholder="Bob">
+        <p> 
+            <input type="text" name="first_name" placeholder="First name">
         </p>
 
-        <p> Last name:
-            <input type="text" name="last_name" placeholder="Smith">
+        <p>
+            <input type="text" name="last_name" placeholder="Last Name">
         </p>
 
-        <p> Username:
-            <input type="text" name="username" placeholder="bobsmith2">
+        <p> 
+            <input type="text" name="username" placeholder="Username">
         </p>
 
         <p> Email:
@@ -41,6 +43,9 @@
 
         <input type="submit" value="Sign Up" />
     </form>
+
+</div>
+
 
 {% endblock %}
 
