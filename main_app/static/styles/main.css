@@ -12,6 +12,7 @@ body {
     background-color: var(--white);
     color: var(--darkblue);
     min-height: 100vh;
+    margin: 50px;
   }
 
 .signupform {
@@ -19,17 +20,19 @@ body {
   }
 
 .url-links {
-    text-align: right;
     display: inline;
 }
 
 .url-links a {
+    text-align: right;
     padding: 10px;
 }
 
-nav {
-    display: inline-block;
+.loginform {
+    text-align: center;
 }
+
+
 
 
   /* sign up page background: */

@@ -4,20 +4,24 @@
 
 {% block content %}
 
-
+<div class="loginform">
+    
     <form method="post" action="{% url 'customlogin' %}">
         {% csrf_token %}
     
-        <h2>Log In</h2>
+        <h2>Log in to start planning your next adventure</h2>
     
-        <p> Email:
+        <p>
             <input type="text" name="email" placeholder="Email">
         </p>
-        <p> Password:
-            <input type="password" name="password" placeholder="password">
+        
+        <p>
+            <input type="password" name="password" placeholder="Password">
         </p>
     
         <input type="submit" value="Log In" />
     </form>
+
+</div>
 
     {% endblock %}
