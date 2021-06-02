@@ -65,6 +65,15 @@ class ShowProfile(View):
         form.instance.user = self.request.user
         return super(Profile, self).for_valid(form)
 
+    
+
+class FavTrails(TemplateView):
+    template_name = "user_favorite_trails.html"
+
+
+class TrailCategory(TemplateView):
+    template_name = "trails_by_category.html"
+
 
 
             
