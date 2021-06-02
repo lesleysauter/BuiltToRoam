@@ -8,7 +8,7 @@
     <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
     
-        <h2>Sign up</h2>
+        <h2> Create your free account </h2>
 
         {% comment %} {{ form.errors }}
         <form method="post" action="{% url 'signup' %}">
@@ -29,16 +29,16 @@
             <input type="text" name="username" placeholder="Username">
         </p>
 
-        <p> Email:
-            <input type="text" name="email" placeholder="email">
+        <p>
+            <input type="text" name="email" placeholder="Email">
         </p>
 
-        <p> Password:
-            <input type="password" name="password1" placeholder="password">
+        <p> 
+            <input type="password" name="password1" placeholder="Password">
         </p>
         
-        <p> Confirm password:
-            <input type="password" name="password2" placeholder="password">
+        <p>
+            <input type="password" name="password2" placeholder="Confirm password">
         </p>
 
         <input type="submit" value="Sign Up" />

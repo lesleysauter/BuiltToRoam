@@ -18,6 +18,19 @@ body {
     text-align: center;
   }
 
+.url-links {
+    text-align: right;
+    display: inline;
+}
+
+.url-links a {
+    padding: 10px;
+}
+
+nav {
+    display: inline-block;
+}
+
 
   /* sign up page background: */
   /* https://cache.desktopnexus.com/thumbseg/1953/1953237-bigthumbnail.jpg */
