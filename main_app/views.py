@@ -75,6 +75,10 @@ class TrailCategory(TemplateView):
     template_name = "trails_by_category.html"
 
 
+class Info(TemplateView):
+    template_name = "info.html"
+
+
 
             
 

@@ -9,5 +9,7 @@ urlpatterns = [
     path('signup/', views.Signup.as_view(), name="signup"),
     path('favtrails/', views.FavTrails.as_view(), name="favtrails"),
     path('trailcategory/', views.TrailCategory.as_view(), name="trailcategory"),
+    path('info/', views.Info.as_view(), name="infopage"),
+    
 
 ]
