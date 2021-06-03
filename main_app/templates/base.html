@@ -8,41 +8,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
     <script src="{% static 'scripts/main.js' %}" defer></script>
 
-    <title>Capstone Project</title>
+    <title>BuiltToRoam</title>
 </head>
 <body>
 
-<nav>
+    <div class="box-area">
     {% comment %} <img src="" alt="Mountain Logo"> {% endcomment %}
-    <h1>BuiltToRoam</h1>
-    
-    <div class="url-links">
-        {% if user.is_authenticated %}
-        <a href="{% url 'profile' user.pk %}">Profile</a> 
-        <a href="{% url 'logout' %}">Logout</a>
-        <a href="{% url 'favtrails' %}">Favorite Trails</a>
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <h1>BuiltToRoam</h1>
+                </div>
+        
+                <nav>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'profile' user.pk %}">Profile</a> 
+                    <a href="{% url 'logout' %}">Logout</a>
+                    <a href="{% url 'favtrails' %}">Favorite Trails</a>
   
-        {% else %}
-        <a href="{% url 'signup' %}">Sign Up</a>
-        <a href="{% url 'customlogin' %}">Log In</a>
-        <a href="{% url 'trailcategory' %}">Trail Category</a>
+                    {% else %}
+                    <a href="{% url 'signup' %}">Sign Up</a>
+                    <a href="{% url 'customlogin' %}">Log In</a>
     
-        {% endif %}
-
+                    {% endif %}
+                </nav>
+            </div>
+        </header>
     </div>
-    
-</nav> 
-
-    {% comment %} <img src="" alt="Mountain Logo"> {% endcomment %}
     
     
     {% block content %}
 
 
     {% endblock %}
+
 </body>
 </html>
