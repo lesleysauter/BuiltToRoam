@@ -121,16 +121,19 @@ input {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* login page css */
 .login {
     background-image: url("../images/112711.jpg");
     font-family: 'Roboto', sans-serif;
 }
 
+
 .boxmodel {
     background-color: var(--white);
-    width: 490px;
+    width: 470px;
     padding: 30px;
-    margin-left: 500px;
+    margin-left: 510px;
     border-radius: 5px; 
 }
 
