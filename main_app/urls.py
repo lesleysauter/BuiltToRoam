@@ -10,8 +10,8 @@ urlpatterns = [
     path('favtrails/<int:pk>/', views.FavTrails.as_view(), name="favtrails"), 
     path('trailcategory/', views.TrailCategory.as_view(), name="trailcategory"),
     path('info/', views.Info.as_view(), name="infopage"),
-    path('createcommunityevent/<int:pk>', views.CreateCommunityEvent.as_view(), name="createevent"),
-    path('viewcommunityevent/<int:pk>', views.CreateCommunityEvent.as_view(), name="viewevent"),
+    path('createcommunityevent/', views.CreateCommunityEvent.as_view(), name="createevent"),
+    path('viewcommunityevent/', views.CreateCommunityEvent.as_view(), name="viewevent"),
 
 
 ]

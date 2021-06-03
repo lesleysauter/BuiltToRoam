@@ -19,7 +19,7 @@ class Login(View):
     def post(self, request):
         email = request.POST['email']
         password = request.POST['password']
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
             return redirect(f"/profile/{user.pk}")
@@ -36,6 +36,8 @@ class Signup(View):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
+            user.email = request.POST.get("email")
+            user.save()
             login(request, user)
             Profile.objects.create(
                 user=request.user, 
