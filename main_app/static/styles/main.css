@@ -127,9 +127,11 @@ input {
 }
 
 .boxmodel {
-    background: var(--white);
+    background-color: var(--white);
+    width: 490px;
     padding: 30px;
-    margin: 30px;
+    margin-left: 500px;
+    border-radius: 5px; 
 }
 
 .boxmodel h2 {
@@ -138,15 +140,18 @@ input {
 
 .boxmodel p {
     padding: 25px;
+    font-size: 20px;
 }
 
 .boxmodel input {
-    padding: 8px;
+    padding: 10px;
+    color: var(--darkblue);
+    font-weight: bolder;
 }
 
 .inputfield {
     display: block;
-    margin: 5px;
+    margin: 18px;
 }
 
 .signupfields {
