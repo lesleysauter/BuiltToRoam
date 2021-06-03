@@ -10,47 +10,59 @@
 
         <form class="signupfields" method="post" action="{% url 'signup' %}">
             {% csrf_token %}
-    
-            <h2> Create your free account </h2>
 
-        {% comment %} {{ form.errors }}
-        <form method="post" action="{% url 'signup' %}">
-            {% csrf_token %} {{form.as_p}}
-            <input type="submit" value="Sign up" />
-            <input type="hidden" value="{{ next }}" name="next" />
-        </form> {% endcomment %}
+            <div class="boxmodel2">
+                <h2> Create your free account </h2>
 
-            <p> 
-            <input type="text" name="first_name" placeholder="First name">
-            </p>
+                {% comment %} {{ form.errors }}
+                <form method="post" action="{% url 'signup' %}">
+                {% csrf_token %} {{form.as_p}}
+                <input type="submit" value="Sign up" />
+                <input type="hidden" value="{{ next }}" name="next" />
+                </form> {% endcomment %}
 
-            <p>
-            <input type="text" name="last_name" placeholder="Last Name">
-            </p>
+                <span class="inputfield">
+                    <input type="text" name="first_name" placeholder="First name">
+                </span>
+            
 
-            <p> 
-            <input type="text" name="username" placeholder="Username">
-            </p>
+                <span class="inputfield">
+                    <input type="text" name="last_name" placeholder="Last Name">
+                </span>
+            
 
-            <p>
-            <input type="text" name="email" placeholder="Email">
-            </p>
+                <span class="inputfield">
+                    <input type="text" name="username" placeholder="Username">
+                </span>
+            
 
-            <p> 
-            <input type="password" name="password1" placeholder="Password">
-            </p>
+                <span class="inputfield">
+                    <input type="text" name="email" placeholder="Email">
+                </span>
+            
+
+                <span class="inputfield">
+                    <input type="password" name="password1" placeholder="Password">
+                </span>
+            
         
-            <p>
-            <input type="password" name="password2" placeholder="Confirm password">
-            </p>
+                <span class="inputfield">
+                    <input type="password" name="password2" placeholder="Confirm password">
+                </span>
+            
 
-            <input type="submit" value="Sign Up" />
+                <span class="inputfield">
+                    <input type="submit" value="Sign Up" />
+                </span>
+            
+                <p>
+                Already have an account? <a href="{% url 'customlogin' %}">Log In</a> 
+                </p>
+
+            </div>
         
         </form>
 
-            <p>
-            Already have an account? <a href="{% url 'customlogin' %}">Log In</a> 
-            </p>
 
     </div>
 

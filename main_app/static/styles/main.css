@@ -150,6 +150,7 @@ input {
     padding: 10px;
     color: var(--darkblue);
     font-weight: bolder;
+    width: 200px;
 }
 
 .inputfield {
@@ -157,9 +158,23 @@ input {
     margin: 18px;
 }
 
-.signupfields {
-    border-spacing: 20px;
+.boxmodel2 {
+    background-color: var(--white);
+    width: 470px;
+    padding: 30px;
+    margin-left: 510px;
+    margin-top: 0;
+    border-radius: 5px; 
 }
+
+.boxmodel2 input {
+    padding: 10px;
+    color: var(--darkblue);
+    font-weight: bolder;
+    width: 250px;
+}
+
+
 
 
 
