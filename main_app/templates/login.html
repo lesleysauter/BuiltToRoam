@@ -11,23 +11,29 @@
     
         <form method="post" action="{% url 'customlogin' %}">
         {% csrf_token %}
+            
+            <div class="boxmodel">
+                <h2>Log in to start planning your next adventure</h2>
     
-            <h2>Log in to start planning your next adventure</h2>
-    
-            <p>
-            <input type="text" name="email" placeholder="Email">
-            </p>
+                <span class="inputfield">
+                <input type="text" name="email" placeholder="Email">
+                </span>
         
-            <p>
-            <input type="password" name="password" placeholder="Password">
-            </p>
-    
-            <input type="submit" value="Log In" />
+                <span class="inputfield">
+                <input type="password" name="password" placeholder="Password">
+                </span>
+                
+                <span class="inputfield">
+                <input type="submit" value="Log In" />
+                </span>
+            
+                <p>
+                Don't have an account? <a href="{% url 'signup' %}">Sign Up</a> for free
+                </p>
+            </div>
+
         </form>
 
-            <p>
-            Don't have an account? <a href="{% url 'signup' %}">Sign Up</a> for free
-            </p>
 
     </div>
 

@@ -12,6 +12,7 @@
 * {
       margin: 0;
       padding: 0;
+      text-decoration: none;
 }
 
 body {
@@ -111,21 +112,48 @@ form {
     padding-top: 300px;
 }
 
-input{
+input {
     padding: 12px;
 }
 
 .signup {
     background-image: url(../images/1414728.jpg);
+    font-family: 'Roboto', sans-serif;
 }
 
 .login {
     background-image: url("../images/112711.jpg");
+    font-family: 'Roboto', sans-serif;
+}
+
+.boxmodel {
+    background: var(--white);
+    padding: 30px;
+    margin: 30px;
+}
+
+.boxmodel h2 {
+    padding: 25px;
+}
+
+.boxmodel p {
+    padding: 25px;
+}
+
+.boxmodel input {
+    padding: 8px;
+}
+
+.inputfield {
+    display: block;
+    margin: 5px;
 }
 
 .signupfields {
     border-spacing: 20px;
 }
+
+
 
 
 
