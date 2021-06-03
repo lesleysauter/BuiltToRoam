@@ -119,6 +119,14 @@ input{
     background-image: url(../images/1414728.jpg);
 }
 
+.login {
+    background-image: url("../images/112711.jpg");
+}
+
+.signupfields {
+    border-spacing: 20px;
+}
+
 
 
 

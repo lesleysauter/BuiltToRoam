@@ -4,28 +4,33 @@
 
 {% block content %}
 
-<div class="loginform">
+<body class="login">
     
-    <form method="post" action="{% url 'customlogin' %}">
+
+    <div class="loginform">
+    
+        <form method="post" action="{% url 'customlogin' %}">
         {% csrf_token %}
     
-        <h2>Log in to start planning your next adventure</h2>
+            <h2>Log in to start planning your next adventure</h2>
     
-        <p>
+            <p>
             <input type="text" name="email" placeholder="Email">
-        </p>
+            </p>
         
-        <p>
+            <p>
             <input type="password" name="password" placeholder="Password">
-        </p>
+            </p>
     
-        <input type="submit" value="Log In" />
-    </form>
+            <input type="submit" value="Log In" />
+        </form>
 
-    <p>
-    Don't have an account? <a href="{% url 'signup' %}">Sign Up</a> for free
-    </p>
+            <p>
+            Don't have an account? <a href="{% url 'signup' %}">Sign Up</a> for free
+            </p>
 
-</div>
+    </div>
 
-    {% endblock %}
+</body>
+
+{% endblock %}

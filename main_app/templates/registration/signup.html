@@ -6,12 +6,12 @@
 <body class="signup">
     
 
-<div class="signupform">
+    <div class="signupform">
 
-    <form method="post" action="{% url 'signup' %}">
-        {% csrf_token %}
+        <form class="signupfields" method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
     
-        <h2> Create your free account </h2>
+            <h2> Create your free account </h2>
 
         {% comment %} {{ form.errors }}
         <form method="post" action="{% url 'signup' %}">
@@ -20,38 +20,39 @@
             <input type="hidden" value="{{ next }}" name="next" />
         </form> {% endcomment %}
 
-        <p> 
+            <p> 
             <input type="text" name="first_name" placeholder="First name">
-        </p>
+            </p>
 
-        <p>
+            <p>
             <input type="text" name="last_name" placeholder="Last Name">
-        </p>
+            </p>
 
-        <p> 
+            <p> 
             <input type="text" name="username" placeholder="Username">
-        </p>
+            </p>
 
-        <p>
+            <p>
             <input type="text" name="email" placeholder="Email">
-        </p>
+            </p>
 
-        <p> 
+            <p> 
             <input type="password" name="password1" placeholder="Password">
-        </p>
+            </p>
         
-        <p>
+            <p>
             <input type="password" name="password2" placeholder="Confirm password">
-        </p>
+            </p>
 
-        <input type="submit" value="Sign Up" />
-    </form>
+            <input type="submit" value="Sign Up" />
+        
+        </form>
 
-    <p>
-    Already have an account? <a href="{% url 'customlogin' %}">Log In</a> 
-    </p>
+            <p>
+            Already have an account? <a href="{% url 'customlogin' %}">Log In</a> 
+            </p>
 
-</div>
+    </div>
 
 </body>
 
