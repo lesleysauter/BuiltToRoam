@@ -79,6 +79,16 @@ class Info(TemplateView):
     template_name = "info.html"
 
 
+class CreateCommunityEvent(TemplateView):
+    template_name = "create_event.html"
+
+
+
+class ViewCommunityEvent(TemplateView):
+    template_name = "view_event.html"
+
+
+
 
             
 
