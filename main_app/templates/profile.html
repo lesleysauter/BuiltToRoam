@@ -3,7 +3,19 @@
 {% block content %}
 
 
-    <h2>{{ user.profile.first_name }}</h2>
+    <p>{{ user.profile.first_name }}</p>
+
+    <section class="userinputs">
+    
+        <input type="text" name="first_name" placeholder="{{ user.profile.first_name }}">
+
+        <input type="text" name="last_name" placeholder="{{ user.profile.last_name }}">
+
+        <input type="text" name="email" placeholder="{{ user.profile.email }}">
+
+        <input type="submit" value="Submit changes" />
+
+    </section>
 
 
 {% endblock %}

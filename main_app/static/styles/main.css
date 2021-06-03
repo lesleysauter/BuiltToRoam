@@ -160,6 +160,8 @@ input {
     margin: 18px;
 }
 
+
+
 /* Sign up page css */
 .boxmodel2 {
     background-color: var(--white);
@@ -176,6 +178,9 @@ input {
     font-weight: bolder;
     width: 250px;
 }
+
+
+
 
 /* gallery of trail categories on home page */
 main {
@@ -279,3 +284,15 @@ main {
     }
 }
 
+
+/* Update Profile Page */
+
+.userinputs {
+    color: var(--darkblue);
+    text-align: center;
+    background: var(--yellowgreen);
+    width: 470px;
+    padding: 30px;
+    margin-left: 510px;
+    border-radius: 5px; 
+}
