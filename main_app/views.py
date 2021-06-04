@@ -2,12 +2,14 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
+from django.views.generic import DetailView
+from django.urls import reverse
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-from .models import Profile
+from .models import Profile, Trail
 
 # Create your views here.
 
@@ -56,7 +58,6 @@ class Signup(View):
         return render(request, "registration/signup.html", context)
 
 
-
 class ShowProfile(View):
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
@@ -68,6 +69,17 @@ class ShowProfile(View):
         return super(Profile, self).for_valid(form)
 
     
+class UpdateProfile(View):
+    def post(self, request, pk):
+        profile = Profile.objects.get(user=pk)
+        profile.first_name = request.POST["first_name"]
+        profile.last_name = request.POST["last_name"]
+        profile.email = request.POST["email"]
+        profile.save()
+        return redirect(f"/profile/{pk}")
+
+        # if input = None :
+        #     keep previous data
 
 class FavTrails(TemplateView):
     template_name = "user_favorite_trails.html"
@@ -75,6 +87,16 @@ class FavTrails(TemplateView):
 
 class TrailCategory(TemplateView):
     template_name = "trails_by_category.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # category = self.request.GET.get('category')
+        # def print_kwargs(**kwargs):
+        #     print(kwargs)
+        context["trails"] = Trail.objects.filter(category__icontains=self.kwargs["category"])
+        print(context)
+        return context
+
 
 
 class Info(TemplateView):
@@ -90,14 +112,6 @@ class ViewCommunityEvent(TemplateView):
     template_name = "view_event.html"
 
 
-class UpdateProfile(View):
-    def post(self, request, pk):
-        profile = Profile.objects.get(user=pk)
-        profile.first_name = request.POST["name"]
-        profile.last_name = request.POST["city"]
-        profile.email = request.POST["email"]
-        profile.save()
-        return redirect(f"/profile/{pk}")
 
             
 

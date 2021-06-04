@@ -8,8 +8,8 @@
         </div>
         <div class="content-area">
             <div class="wrapper">
-                <h2>Content area</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2>Trails for All</h2>
+                <p>Ready to enjoy the outdoors? Here you can view trail cateogries of your choice and see what's out there for you to explore. You can use these to your advantage to make your planning a little easier. Get out there today!</p>
             </div>
 
     <main>
@@ -20,12 +20,12 @@
                 </div>
                 <div class="card_content">
                     <p class="card__title text--medium">
-                        Here's the Title of Category
+                        <a href="{% url 'trailcategory' 'dog friendly' %}">Dog Friendly</a>
                     </p>
-                    <div class="card_info">
+                    {% comment %} <div class="card_info">
                         <p class="text--medium">Text</p>
                         <p class="card__text text--medium">Text</p>
-                    </div>
+                    </div>  {% endcomment %}
                 </div>
             </div>
             <div class="card">
@@ -34,12 +34,12 @@
                 </div>
                 <div class="card_content">
                     <p class="card__title text--medium">
-                        Here's the Title of Category
+                        <a href="{% url 'trailcategory' 'hiking' %}">Hiking</a>
                     </p>
-                    <div class="card_info">
+                    {% comment %} <div class="card_info">
                         <p class="text--medium">Text</p>
                         <p class="card__text text--medium">Text</p>
-                    </div>
+                    </div>  {% endcomment %}
                 </div>
             </div>
             <div class="card">
@@ -48,13 +48,13 @@
                 </div>
                 <div class="card_content">
                     <p class="card__title text--medium">
-                        Here's the Title of Category
+                        <a href="{% url 'trailcategory' 'views' %}">Views</a>
                     </p>
-                    <div class="card_info">
+                    {% comment %} <div class="card_info">
                         <p class="text--medium">Text</p>
                         <p class="card__text text--medium">Text</p>
-                    </div>
-                </div>
+                    </div> {% endcomment %}
+                </div> 
             </div>
             <div class="card">
                 <div class="card_image_container">
@@ -62,13 +62,13 @@
                 </div>
                 <div class="card_content">
                     <p class="card__title text--medium">
-                        Here's the Title of Category
+                        <a href="{% url 'trailcategory' 'camping' %}">Camping</a>
                     </p>
-                    <div class="card_info">
+                    {% comment %} <div class="card_info">
                         <p class="text--medium">Text</p>
                         <p class="card__text text--medium">Text</p>
-                    </div>
-                </div>
+                    </div> {% endcomment %}
+                </div> 
             </div>
             <div class="card">
                 <div class="card_image_container">
@@ -76,12 +76,12 @@
                 </div>
                 <div class="card_content">
                     <p class="card__title text--medium">
-                        Here's the Title of Category
+                        <a href="{% url 'trailcategory' 'rock climbing' %}">Rock Climbing</a>
                     </p>
-                    <div class="card_info">
+                    {% comment %} <div class="card_info">
                         <p class="text--medium">Text</p>
                         <p class="card__text text--medium">Text</p>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
             <div class="card">
@@ -90,15 +90,19 @@
                 </div>
                 <div class="card_content">
                     <p class="card__title text--medium">
-                        Here's the Title of Category
+                        <a href="{% url 'trailcategory' 'waterfall' %}">Waterfalls</a>
                     </p>
-                    <div class="card_info">
+                    {% comment %} <div class="card_info">
                         <p class="text--medium">Text</p>
                         <p class="card__text text--medium">Text</p>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
         </section>
     </main>
+
+    <span>
+    <a href="{% url 'infopage' %}">Tips for Safe Exploring</a>
+    </span>
 
 {% endblock %}

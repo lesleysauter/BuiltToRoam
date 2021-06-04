@@ -4,6 +4,20 @@
 
 <h1> Trail Category Show Page </h1>
 
+<div class="traildetails">
+
+{% for trail in trails %}
+    <ul>
+    <li> <span class="trail_name_display">{{ trail.trail_name }}</span> </li>
+    <li> <span class="trail_location_display">{{ trail.location }}</span> </li>
+    <li> <span class="trail_length_display">{{ trail.length }}</span> </li>
+    <li> <span class="trail_category_display">{{ trail.category }}</span> </li>
+    <li> <span class="trail_difficulty_display">{{ trail.difficulty }}</span> </li>
+    </ul>
+{% endfor %}
+</div>
+
+{% comment %} map for selected trail will display here {% endcomment %}
 
 {% comment %} Mapbox code {% endcomment %}
 

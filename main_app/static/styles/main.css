@@ -324,3 +324,16 @@ main {
     border-color: var(--grey);
     border-width: 4px;
 }
+
+/* info page */
+
+.contentlinks ul {
+    list-style-type: none;
+}
+
+/* trail category view page */
+
+.traildetails {
+    margin-top: 500px;
+}
+
