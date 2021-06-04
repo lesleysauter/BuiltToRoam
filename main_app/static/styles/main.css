@@ -212,6 +212,7 @@ main {
     background-color: var(--white);
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    
 }
 
 .card:hover {
@@ -289,10 +290,37 @@ main {
 
 .userinputs {
     color: var(--darkblue);
+    font-size: 25px;
+    margin-top: 300px;
     text-align: center;
-    background: var(--yellowgreen);
+    background: var(--white);
     width: 470px;
-    padding: 30px;
-    margin-left: 510px;
-    border-radius: 5px; 
+    padding: 25px;
+    border-radius: 5px;     
+    margin-left: 700px;
+}
+
+
+.updateprofile_box form {
+    padding-top: 0px;
+}
+
+.inputfield input {
+    width: 250px;
+    font-size: 18px;
+}
+
+.updateprofile {
+    background: url("../images/5314493.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+.submitchanges {
+    background: var(--white);
+    font-size: 18px;
+    text-align: center;
+    border-color: var(--grey);
+    border-width: 4px;
 }

@@ -90,7 +90,14 @@ class ViewCommunityEvent(TemplateView):
     template_name = "view_event.html"
 
 
-
+class UpdateProfile(View):
+    def post(self, request, pk):
+        profile = Profile.objects.get(user=pk)
+        profile.first_name = request.POST["name"]
+        profile.last_name = request.POST["city"]
+        profile.email = request.POST["email"]
+        profile.save()
+        return redirect(f"/profile/{pk}")
 
             
 
