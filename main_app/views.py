@@ -4,12 +4,13 @@ from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
 from django.urls import reverse
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-from .models import Profile, Trail
+from .models import Profile, Trail, CommunityHike
 
 # Create your views here.
 
@@ -90,13 +91,9 @@ class TrailCategory(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # category = self.request.GET.get('category')
-        # def print_kwargs(**kwargs):
-        #     print(kwargs)
         context["trails"] = Trail.objects.filter(category__icontains=self.kwargs["category"])
         print(context)
         return context
-
 
 
 class Info(TemplateView):
@@ -104,12 +101,25 @@ class Info(TemplateView):
 
 
 class CreateCommunityEvent(TemplateView):
+    # model = CommunityHike
+    # fields = ['creator', 'trail', 'date', 'description', 'attendees']
     template_name = "create_event.html"
+
+    # def get_success_url(self):
+    #     return reverse('viewevent', kwargs={'pk': self.object.pk})
 
 
 
 class ViewCommunityEvent(TemplateView):
     template_name = "view_event.html"
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context["communityhike"] = CommunityHike.objects.filter(category__icontains=self.kwargs["trail"])
+    #     print(context)
+    #     return context
+
+
 
 
 

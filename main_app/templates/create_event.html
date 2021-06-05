@@ -2,7 +2,24 @@
 
 {% block content %}
 
-<h1>Create Event Page</h1>
+<div class="create_event_header">
+    <h2>Create Event Page</h2>
+</div>
+
+<form class="create_event" method="post">
+{% csrf_token %}
+
+    {% comment %} {{form.as_p}} {% endcomment %}
+
+    <input type="text" name="date" placeholder="Date of Event">
+
+    <input type="text" name="time" placeholder="09:00 PST">
+
+    <input type="text" name="description" placeholder="Description of event"> 
+
+    <input type="submit" value="Submit Event" />
+
+</form>
 
 
 

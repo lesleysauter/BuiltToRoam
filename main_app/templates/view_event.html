@@ -4,4 +4,19 @@
 
 <h1>View Event Page</h1>
 
+
+<div class="view_event_info">
+    <ul>
+        <li> <span class="event_trail_name">{{ trail.trail_name }}</span> </li>
+        <li> <span class="event_location">{{ trail.location }}</span> </li>
+        <li> <span class="event_attendees">{{ communityhike.attendees }}</span> </li>
+        <li> <span class="event_date">{{ communityhike.date }}</span> </li>
+        <li> <span class="event_time">{{ communityhike.time }}</span> </li>
+        <li> <span class="event_description">{{ communityhike.desciption }}</span> </li>
+
+                <input type="submit" value="Delete Event">
+    
+    </ul>
+</div>
+
 {% endblock %}

@@ -334,6 +334,26 @@ main {
 /* trail category view page */
 
 .traildetails {
-    margin-top: 500px;
+    margin-top: 300px;
 }
+
+/* create event page */
+
+.create_event_header h2 {
+    padding: 175px;
+
+}
+.create_event input {
+    text-align: center;
+    display: block;
+}
+
+
+
+/* .create_event form {
+    padding-top: 100px;
+
+} */
+
+
 

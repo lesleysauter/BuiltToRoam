@@ -13,6 +13,7 @@
     <li> <span class="trail_length_display">{{ trail.length }}</span> </li>
     <li> <span class="trail_category_display">{{ trail.category }}</span> </li>
     <li> <span class="trail_difficulty_display">{{ trail.difficulty }}</span> </li>
+    <li> <button><a href="{% url 'createevent' %}">Create Community Event</a></button></li>
     </ul>
 {% endfor %}
 </div>

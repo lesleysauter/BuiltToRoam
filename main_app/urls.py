@@ -12,7 +12,7 @@ urlpatterns = [
     path('trailcategory/<str:category>/', views.TrailCategory.as_view(), name="trailcategory"),
     path('info/', views.Info.as_view(), name="infopage"),
     path('createcommunityevent/', views.CreateCommunityEvent.as_view(), name="createevent"),
-    path('viewcommunityevent/', views.CreateCommunityEvent.as_view(), name="viewevent"),
+    path('viewcommunityevent/', views.ViewCommunityEvent.as_view(), name="viewevent"),
 
 
 ]
