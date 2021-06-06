@@ -100,13 +100,13 @@ class Info(TemplateView):
     template_name = "info.html"
 
 
-class CreateCommunityEvent(TemplateView):
-    # model = CommunityHike
-    # fields = ['creator', 'trail', 'date', 'description', 'attendees']
+class CreateCommunityEvent(CreateView):
+    model = CommunityHike
+    fields = ['creator', 'trail', 'date', 'description', 'attendees']
     template_name = "create_event.html"
 
-    # def get_success_url(self):
-    #     return reverse('viewevent', kwargs={'pk': self.object.pk})
+    def get_success_url(self):
+        return reverse('viewevent', kwargs={'pk': self.object.pk})
 
 
 # class DeleteCommunityEvent(DeleteView):
