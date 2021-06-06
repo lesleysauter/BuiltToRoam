@@ -110,8 +110,8 @@ class CreateCommunityEvent(CreateView):
 
 
 # class DeleteCommunityEvent(DeleteView):
-    model = CommunityHike
-    template_name = ""
+    # model = CommunityHike
+    # template_name = ""
 
 
 
