@@ -12,7 +12,9 @@
             <li> <span class="trail_location_display">Location: {{ trail.location }}</span> </li>
             <li> <span class="trail_length_display">Length: {{ trail.length }}</span> </li>
             <li> <span class="trail_difficulty_display">Difficulty: {{ trail.difficulty }}</span> </li>
+            {% if user.is_authenticated %}
             <li> <button><a href="{% url 'favtrails' %}">Add to your favorite trails</a></button></li>
+            {% endif %}
             <li> <button><a href="{% url 'viewevent' %}">View events for this trail</a></button></li>
             <li> <button><a href="{% url 'createevent' %}">Create Community Event</a></button></li>
         </ul>
