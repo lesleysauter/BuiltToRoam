@@ -5,17 +5,19 @@
 <h1> Trail Category Show Page </h1>
 
 <div class="traildetails">
-
-{% for trail in trails %}
-    <ul>
-    <li> <span class="trail_name_display">{{ trail.trail_name }}</span> </li>
-    <li> <span class="trail_location_display">{{ trail.location }}</span> </li>
-    <li> <span class="trail_length_display">{{ trail.length }}</span> </li>
-    <li> <span class="trail_category_display">{{ trail.category }}</span> </li>
-    <li> <span class="trail_difficulty_display">{{ trail.difficulty }}</span> </li>
-    <li> <button><a href="{% url 'createevent' %}">Create Community Event</a></button></li>
-    </ul>
-{% endfor %}
+    <aside class="view_category_trails">
+        {% for trail in trails %}
+        <ul>
+            <li> <span class="trail_name_display">Trail: {{ trail.trail_name }}</span> </li>
+            <li> <span class="trail_location_display">Location: {{ trail.location }}</span> </li>
+            <li> <span class="trail_length_display">Length: {{ trail.length }}</span> </li>
+            <li> <span class="trail_difficulty_display">Difficulty: {{ trail.difficulty }}</span> </li>
+            <li> <button><a href="{% url 'favtrails' %}">Add to your favorite trails</a></button></li>
+            <li> <button><a href="{% url 'viewevent' %}">View events for this trail</a></button></li>
+            <li> <button><a href="{% url 'createevent' %}">Create Community Event</a></button></li>
+        </ul>
+        {% endfor %}
+    </aside>
 </div>
 
 {% comment %} map for selected trail will display here {% endcomment %}

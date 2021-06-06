@@ -79,8 +79,8 @@ class UpdateProfile(View):
         profile.save()
         return redirect(f"/profile/{pk}")
 
-        # if input = None :
-        #     keep previous data
+        # if form.data['first_name', 'last_name', 'email'] is None:
+        #     return 
 
 class FavTrails(TemplateView):
     template_name = "user_favorite_trails.html"

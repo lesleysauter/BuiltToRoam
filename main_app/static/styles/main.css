@@ -337,6 +337,10 @@ main {
     margin-top: 300px;
 }
 
+aside {
+    float: left;
+}
+
 /* create event page */
 
 .create_event_header h2 {
