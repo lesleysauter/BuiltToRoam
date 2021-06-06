@@ -25,7 +25,7 @@ class Login(View):
         user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
-            return redirect(f"/profile/{user.pk}")
+            return redirect(f"home")
         
         else:
             return HttpResponse("Unable to login!", content_type="text/plain")
@@ -48,7 +48,7 @@ class Signup(View):
                 last_name = request.POST.get("last_name"),
                 email = request.POST.get("email"),
                 )
-            return redirect(f"/profile/{user.pk}")
+            return redirect(f"customlogin")
         else:
             print(request.POST, form.errors)
             return HttpResponse("Unable to create profile!", content_type="text/plain")
@@ -107,6 +107,11 @@ class CreateCommunityEvent(TemplateView):
 
     # def get_success_url(self):
     #     return reverse('viewevent', kwargs={'pk': self.object.pk})
+
+
+# class DeleteCommunityEvent(DeleteView):
+    model = CommunityHike
+    template_name = ""
 
 
 

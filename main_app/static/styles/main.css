@@ -48,12 +48,16 @@ header h1{
     line-height: 100px;
 }
 
+.logo h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #206a5d;
+}
+
 .logo a {
     text-decoration: none;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     color: var(--darkblue);
-    letter-spacing: 5px;
 }
 
 nav {
@@ -65,7 +69,7 @@ nav a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    margin: 0 10px;
+    margin: 0 20px;
     color: var(--darkblue);
 }
 
@@ -101,13 +105,21 @@ nav a {
     margin: 0;
 }
 
+.wrapper p {
+    font-size: 20px;
+}
+
 .content-area p{
     padding: 2% 0;
     font-family: 'Roboto', sans-serif;
     line-height: 30px;
 }
 
-/* end of fixed nav bar css */
+.text--medium a {
+    font-size: 20px;
+    color: #206a5d;
+    font-weight: 300px;
+}
 
 
 form {
