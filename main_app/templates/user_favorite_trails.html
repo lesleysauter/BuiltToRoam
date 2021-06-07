@@ -4,6 +4,12 @@
 
 <h1>User's Favorited Trails Page</h1>
 
+{% for trail in user.profile.trail_set.all %}
+
+<p>{{trail.trail_name}}</p>
+
+{% endfor %}
+
 
 {% comment %} Mapbox code {% endcomment %}
 

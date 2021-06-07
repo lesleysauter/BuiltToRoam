@@ -7,7 +7,7 @@
 </div>
 
 <form class="create_event" method="post">
-{% csrf_token %}
+{% csrf_token %} {{form.errors}}
 
     {% comment %} {{form.as_p}} {% endcomment %}
 

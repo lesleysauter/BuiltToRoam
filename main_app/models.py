@@ -31,5 +31,6 @@ class CommunityHike(Model):
     creator = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name="community_hikes")
     trail = models.ForeignKey(Trail, on_delete=models.CASCADE, related_name="community_hikes")
     date = models.CharField(max_length=50)
+    time = models.CharField(max_length=50)
     description = models.TextField(max_length=1000)
     attendees = models.ManyToManyField(Profile)

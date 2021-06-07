@@ -18,12 +18,12 @@
             <li> <span class="trail_difficulty_display">Difficulty: {{ trail.difficulty }}</span> </li>
             <br />
             {% if user.is_authenticated %}
-            <li> <button><a href="{% url 'favtrails' %}">Add to your favorites</a></button></li>
+            <li> <button><a href="{% url 'favtrails' user.pk %}">Add to your favorites</a></button></li>
              <br />
             {% endif %}
-            <li> <button><a href="{% url 'viewevent' %}">View events</a></button></li>
+            <li> <button><a href="{% url 'viewevent' trail.pk %}">View events</a></button></li>
              <br />
-            <li> <button><a href="{% url 'createevent' %}">Create Event</a></button></li>
+            <li> <button><a href="{% url 'createevent' trail.pk %}">Create Event</a></button></li>
              <br />
         </ul>
         {% endfor %}

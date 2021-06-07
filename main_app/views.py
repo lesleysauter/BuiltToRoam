@@ -51,7 +51,7 @@ class Signup(View):
             return redirect(f"customlogin")
         else:
             print(request.POST, form.errors)
-            return HttpResponse("Unable to create profile!", content_type="text/plain")
+            return HttpResponse("Unable to create profile, please try again.", content_type="text/plain")
 
     def get(self, request):
         form = UserCreationForm()
@@ -82,8 +82,6 @@ class UpdateProfile(View):
         # if form.data['first_name', 'last_name', 'email'] is None:
         #     return 
 
-class FavTrails(TemplateView):
-    template_name = "user_favorite_trails.html"
 
 
 class TrailCategory(TemplateView):
@@ -96,35 +94,50 @@ class TrailCategory(TemplateView):
         return context
 
 
-class Info(TemplateView):
-    template_name = "info.html"
+
+class FavTrails(TemplateView):
+    template_name = "user_favorite_trails.html"
+
+
 
 
 class CreateCommunityEvent(CreateView):
     model = CommunityHike
-    fields = ['creator', 'trail', 'date', 'description', 'attendees']
+    fields = ['date', 'description', 'time']
     template_name = "create_event.html"
 
+    def form_valid(self, form):
+        form.instance.creator = self.request.user.profile
+        form.instance.trail = Trail.objects.get(pk=self.kwargs["trail_pk"])
+        return super(CreateCommunityEvent, self).form_valid(form)
+    
     def get_success_url(self):
         return reverse('viewevent', kwargs={'pk': self.object.pk})
 
 
-# class DeleteCommunityEvent(DeleteView):
-    # model = CommunityHike
-    # template_name = ""
 
-
-
-class ViewCommunityEvent(TemplateView):
+class ViewCommunityEvent(DetailView):
+    model = CommunityHike
     template_name = "view_event.html"
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context["communityhike"] = CommunityHike.objects.filter(category__icontains=self.kwargs["trail"])
-    #     print(context)
-    #     return context
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["communityhike"] = CommunityHike.objects.all()
+        print(context)
+        return context
 
 
+
+class DeleteCommunityEvent(DeleteView):
+    model = CommunityHike
+    template_name = "event_delete_confirmation.html"
+    success_url = "/"
+
+
+
+class Info(TemplateView):
+    template_name = "info.html"
 
 
 
