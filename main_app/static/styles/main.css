@@ -351,6 +351,49 @@ main {
 
 aside {
     float: left;
+    text-align: left;
+    margin-top: -120px;
+    margin-left: 180px;
+    color: #ffffff;
+    background-color: #206a5d;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    
+}
+
+.view_category_trails button {
+    padding: 10px;
+    font-size: 15px;
+    color: var(--white);
+    display: inline;
+}
+
+.mapboxgl-map {
+    float: right;
+    margin-right: 300px;
+    margin-top: -80px;
+}
+
+ul {
+    list-style: none;
+    line-height: 30px;
+}
+
+.trail_name_display {
+    padding: 5px;
+}
+
+.trail_location_display {
+    padding: 5px;
+}
+
+.trail_length_display {
+    padding: 5px;
+}
+
+.trail_difficulty_display {
+    padding: 5px;
 }
 
 /* create event page */
