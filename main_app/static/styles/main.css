@@ -235,6 +235,14 @@ main {
     transform: translate(-7px);
 }
 
+.category_link:hover {
+    background-color: #206a5d;
+    color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
 .card_image_container {
     width: 100%;
     padding-top: 56.25%;
@@ -376,7 +384,9 @@ aside {
     font-size: 18px;
     border: 100px;
     border-color: var(--white);
-    
+    width: 630px;
+    height: 600px;
+    overflow-y: scroll;
 }
 
 .view_category_trails button {
@@ -430,8 +440,13 @@ ul {
 
 
 .create_event input {
-    text-align: center;
+    text-align: left;
+    font-size: 18px;
     /* display: block; */
+}
+
+.description {
+    padding: 100px;
 }
 
 .form_create_event {
