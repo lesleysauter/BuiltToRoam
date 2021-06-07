@@ -132,6 +132,8 @@ input {
 
 .signup {
     background-image: url(../images/1414728.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -139,6 +141,8 @@ input {
 /* login page css */
 .login {
     background-image: url("../images/112711.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -411,13 +415,34 @@ ul {
 
 /* create event page */
 
+.createeventpage {
+    background: url("../images/forcreatepage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .create_event_header h2 {
     padding: 175px;
-
+    text-align: center;
+    color: var(--white);
 }
+
+
 .create_event input {
     text-align: center;
-    display: block;
+    /* display: block; */
+}
+
+.form_create_event {
+    color: var(--white);
+    font-size: 18px;
+}
+
+.form_create_event {
+    text-align: center;
+    margin-left: 250px;
+    margin-top: -300px;
 }
 
 

@@ -2,29 +2,50 @@
 
 {% block content %}
 
-<div class="create_event_header">
-    <h2>Create Event</h2>
-</div>
+<body class="createeventpage">
 
-<form class="create_event" method="post">
-{% csrf_token %} {{form.errors}}
+
+    <div class="create_event_header">
+        <h2>Create Event</h2>
+    </div>
+
+    <div class="form_create_event">
+
+        <form class="create_event" method="post">
+        {% csrf_token %} {{form.errors}}
 
     {% comment %} {{form.as_p}} {% endcomment %}
 
-    <ul>
-            <li> <span class="trail_name_display">Trail: {{ trail.trail_name }}</span> </li>
-            <li> <span class="trail_location_display">Location: {{ trail.location }}</span> </li>
-    </ul>
+        <ul>
+            <li> <span class="trail_name_display">Trail: {{trail.trail_name}}</span> </li>
+            <li> <span class="trail_location_display">Location: {{trail.location}}</span> </li>
+        </ul>
+    
+        <br />
+        <br />
 
-    <input type="text" name="date" placeholder="Date of Event">
+        <input type="text" name="date" placeholder="Date of Event">
 
-    <input type="text" name="time" placeholder="09:00 PST">
+        <br />
+        <br />
 
-    <input type="text" name="description" placeholder="Description of event"> 
+        <input type="text" name="time" placeholder="09:00 PST">
 
-    <input type="submit" value="Submit Event" />
+        <br />
+        <br />
 
-</form>
+        <input type="text" name="description" placeholder="Description of event"> 
+
+        <br />
+        <br />
+
+         <input type="submit" value="Submit Event" />
+
+        </form>
+
+    </div>
+    
+</body>
 
 
 

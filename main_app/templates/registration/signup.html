@@ -16,13 +16,6 @@
                 <br />
                 <p> Save favorite trails & create community hikes</p>
 
-                {% comment %} {{ form.errors }}
-                <form method="post" action="{% url 'signup' %}">
-                {% csrf_token %} {{form.as_p}}
-                <input type="submit" value="Sign up" />
-                <input type="hidden" value="{{ next }}" name="next" />
-                </form> {% endcomment %}
-
                 <span class="inputfield">
                     <input type="text" name="first_name" placeholder="First name">
                 </span>
