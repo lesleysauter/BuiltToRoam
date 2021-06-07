@@ -3,13 +3,18 @@
 {% block content %}
 
 <div class="create_event_header">
-    <h2>Create Event Page</h2>
+    <h2>Create Event</h2>
 </div>
 
 <form class="create_event" method="post">
 {% csrf_token %}
 
     {% comment %} {{form.as_p}} {% endcomment %}
+
+    <ul>
+            <li> <span class="trail_name_display">Trail: {{ trail.trail_name }}</span> </li>
+            <li> <span class="trail_location_display">Location: {{ trail.location }}</span> </li>
+    </ul>
 
     <input type="text" name="date" placeholder="Date of Event">
 

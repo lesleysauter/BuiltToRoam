@@ -333,7 +333,11 @@ main {
     background: var(--white);
     font-size: 18px;
     text-align: center;
-    border-color: var(--grey);
+    border-color: #206a5d;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #206a5d;
+    color: var(--white);
     border-width: 4px;
 }
 
@@ -361,8 +365,8 @@ aside {
     text-align: left;
     margin-top: -120px;
     margin-left: 180px;
-    color: #ffffff;
-    background-color: #206a5d;
+    color: var(--darkblue);
+    background-color: var(--white);
     padding: 15px;
     border-radius: 5px;
     font-size: 18px;
