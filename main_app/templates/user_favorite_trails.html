@@ -4,11 +4,22 @@
 
 <h1>User's Favorited Trails Page</h1>
 
-{% for trail in user.profile.trail_set.all %}
+<div class="favorite_trails">
+    <aside class="list_fav_trails"></aside>
+        {% for trail in user.profile.trail_set.all %}
 
-<p>{{trail.trail_name}}</p>
+        <p>Name: {{trail.trail_name}}</p>
+        <p>Location: {{trail.location}}</p>
+        <p>Length: {{trail.length}}</p>
+        <p>Difficulty: {{trail.difficulty}}</p>
+        <p>Category: {{trail.category}}</p>
+        <br />
+        <br />
+        {% endfor %}
 
-{% endfor %}
+    </aside>
+
+</div>
 
 
 {% comment %} Mapbox code {% endcomment %}
