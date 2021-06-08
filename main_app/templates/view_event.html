@@ -6,6 +6,7 @@
 
 
 <div class="view_event_info">
+    <div class="view_info_list"></div>
     <ul>
         <li> <span class="event_trail_name">{{ trail.trail_name }}</span> </li>
         <li> <span class="event_location">{{ trail.location }}</span> </li>
@@ -13,10 +14,15 @@
         <li> <span class="event_date">{{ communityhike.date }}</span> </li>
         <li> <span class="event_time">{{ communityhike.time }}</span> </li>
         <li> <span class="event_description">{{ communityhike.desciption }}</span> </li>
+                
+                <form class="create_event" method="post">
+                {% csrf_token %} {{form.errors}}
 
                 <input type="submit" value="Delete Event">
+                </form>
     
     </ul>
+    </div>
 </div>
 
 {% endblock %}

@@ -98,6 +98,10 @@ class TrailCategory(TemplateView):
 class FavTrails(TemplateView):
     template_name = "user_favorite_trails.html"
 
+    
+
+
+
 
 
 

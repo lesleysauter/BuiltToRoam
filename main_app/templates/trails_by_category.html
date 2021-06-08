@@ -9,52 +9,54 @@
 
 
 <div class="traildetails">
-    <aside class="view_category_trails">
-        {% for trail in trails %}
-        <ul>
-            <li> <span class="trail_name_display">Trail: {{trail.trail_name}}</span> </li>
-            <li> <span class="trail_location_display">Location: {{trail.location}}</span> </li>
-            <li> <span class="trail_length_display">Length: {{trail.length}}</span> </li>
-            <li> <span class="trail_difficulty_display">Difficulty: {{trail.difficulty}}</span> </li>
-            <br />
-            {% if user.is_authenticated %}
-            <li> <button><a href="{% url 'favtrails' user.pk %}">Add to your favorites</a></button></li>
-             <br />
-            {% endif %}
-            <li> <button><a href="{% url 'viewevent' trail.pk %}">View events</a></button></li>
-             <br />
-            <li> <button><a href="{% url 'createevent' trail.pk %}">Create Event</a></button></li>
-             <br />
-        </ul>
-        {% endfor %}
-    </aside>
+    <div class="textinfo">
+        <aside class="view_category_trails">
+            {% for trail in trails %}
+                <ul>
+                    <li> <span class="trail_name_display">Trail: {{trail.trail_name}}</span> </li>
+                    <li> <span class="trail_location_display">Location: {{trail.location}}</span> </li>
+                    <li> <span class="trail_length_display">Length: {{trail.length}}</span> </li>
+                    <li> <span class="trail_difficulty_display">Difficulty: {{trail.difficulty}}</span> </li>
+                    <br />
+                    {% if user.is_authenticated %}
+                    <li> <button><a href="{% url 'favtrails' user.pk %}">Add to your favorites</a></button></li>
+                    <br />
+                    {% endif %}
+                    <li> <button><a href="{% url 'viewevent' trail.pk %}">View events</a></button></li>
+                    <br />
+                    <li> <button><a href="{% url 'createevent' trail.pk %}">Create Event</a></button></li>
+                    <br />
+                </ul>
+            {% endfor %}
+        </aside>
+    </div>
+    
+    <div class="map">
+        <div id='map' style='width: 600px; height: 600px;'>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoibGVzbGV5c2F1dGVyIiwiYSI6ImNrcDhuenN4dTBhNzMyeG54em81dGlxY2UifQ.k1YPnWFRXEvyyfYANmGajQ';
+                var map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
+                center: [-90.6833000000, 38.0838000000], // starting position [lng, lat]
+                zoom: 9 // starting zoom
+                });
+                {% for trail in trails %}
+                    new mapboxgl.Marker()
+                    .setLngLat([{{trail.longitude}}, {{trail.latitude}}])
+                    .setPopup(new mapboxgl.Popup().setHTML("Trail name goes here"))
+                    .addTo(map);
+                {% endfor %}
+            </script>
+        </div>
+    </div>
+
 </div>
 
 {% comment %} map for selected trail will display here {% endcomment %}
 
 {% comment %} Mapbox code {% endcomment %}
 
-<div id='map' style='width: 600px; height: 600px;'></div>
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoibGVzbGV5c2F1dGVyIiwiYSI6ImNrcDhuenN4dTBhNzMyeG54em81dGlxY2UifQ.k1YPnWFRXEvyyfYANmGajQ';
-        var map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
-        center: [-90.6833000000, 38.0838000000], // starting position [lng, lat]
-        zoom: 9 // starting zoom
-        });
-        {% for trail in trails %}
-        new mapboxgl.Marker()
-        .setLngLat([{{trail.longitude}}, {{trail.latitude}}])
-        .setPopup(new mapboxgl.Popup().setHTML("Trail name goes here"))
-        .addTo(map);
-
-        
-        
-        {% endfor %}
-        
-        
-    </script>
  
 
 

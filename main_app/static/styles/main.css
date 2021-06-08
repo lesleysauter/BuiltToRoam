@@ -196,8 +196,6 @@ input {
 }
 
 
-
-
 /* gallery of trail categories on home page */
 main {
     display: grid;
@@ -365,9 +363,6 @@ main {
     background-repeat: no-repeat;
 }
 
-.contentinfo {
-    /* margin-top: 300px; */
-}
 
 /* trail category view page */
 
@@ -382,10 +377,10 @@ main {
     margin-top: 300px;
 }
 
-aside {
+.view_category_trails {
     float: left;
     text-align: left;
-    margin-top: -120px;
+    /* margin-top: -120px; */
     margin-left: 180px;
     color: var(--darkblue);
     background-color: var(--white);
@@ -409,7 +404,7 @@ aside {
 .mapboxgl-map {
     float: right;
     margin-right: 300px;
-    margin-top: -120px;
+    /* margin-top: -120px; */
 }
 
 ul {
@@ -470,10 +465,9 @@ ul {
     margin-top: -300px;
 }
 
-aside {
+.list_fav_trails {
     float: left;
     text-align: left;
-    margin-top: -120px;
     margin-left: 180px;
     color: var(--darkblue);
     background-color: var(--white);
@@ -488,4 +482,41 @@ aside {
 }
 
 
+.favorite_trails1, .traildetails {
+    display: flex;
+    margin-top: 200px;
+    position: relative;
+    justify-content: flex;
+    text-align: left;
 
+}
+
+.map, .textinfo {
+    position: relative;
+    left: 80px;
+}
+
+/* .list_of_fav_trails {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 100px;
+    border-color: var(--white);
+    width: 630px;
+    height: 600px;
+    overflow-y: scroll;
+} */
+
+.mountainlogo {
+    position: relative;
+    right: 570px;
+}
+
+.box-area a {
+    margin-bottom: 100px;
+}
+
+.view_info_list {
+    margin-top: 500px;
+}
