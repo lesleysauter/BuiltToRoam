@@ -13,6 +13,7 @@ urlpatterns = [
     path('info/', views.Info.as_view(), name="infopage"),
     path('createcommunityevent/<int:trail_pk>/', views.CreateCommunityEvent.as_view(), name="createevent"),
     path('viewcommunityevent/<int:pk>/', views.ViewCommunityEvent.as_view(), name="viewevent"),
+    path('communityevent/<int:pk>/delete/', views.DeleteCommunityEvent.as_view(), name="deleteevent"),
 
 
 ]

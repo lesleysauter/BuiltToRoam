@@ -2,7 +2,11 @@
 
 {% block content %}
 
-<h1>User's Favorited Trails Page</h1>
+
+<body class="favtrailspage">
+    
+
+<h1 class="favoritetrailsheader">Favorited Trails</h1>
 
 <div class="favorite_trails1">
     <div class="textinfo">
@@ -14,7 +18,9 @@
             <p>Length: {{trail.length}}</p>
             <p>Difficulty: {{trail.difficulty}}</p>
             <p>Category: {{trail.category}}</p>
-            
+
+            <br/>
+                <ul>
                     <li> <button><a href="{% url 'viewevent' trail.pk %}">View events</a></button></li>
                     <br />
                     <li> <button><a href="{% url 'createevent' trail.pk %}">Create Event</a></button></li>
@@ -28,7 +34,7 @@
     </div>
     
     <div class="map">
-        <div id='map' style='width: 400px; height: 300px;'>
+        <div id='map' style='width: 600px; height: 600px;'>
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoibGVzbGV5c2F1dGVyIiwiYSI6ImNrcDhuenN4dTBhNzMyeG54em81dGlxY2UifQ.k1YPnWFRXEvyyfYANmGajQ';
                 var map = new mapboxgl.Map({
@@ -37,10 +43,18 @@
                 center: [-74.5, 40], // starting position [lng, lat]
                 zoom: 9 // starting zoom
                 });
+                {% for trail in trails %}
+                    new mapboxgl.Marker()
+                    .setLngLat([{{trail.longitude}}, {{trail.latitude}}])
+                    .setPopup(new mapboxgl.Popup().setHTML("Trail name goes here"))
+                    .addTo(map);
+                {% endfor %}
             </script>
         </div>
     </div>
 </div>
+
+</body>
 
 
 {% comment %} Mapbox code {% endcomment %}

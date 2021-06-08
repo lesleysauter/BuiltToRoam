@@ -14,8 +14,6 @@
         <form class="create_event" method="post">
         {% csrf_token %} {{form.errors}}
 
-    {% comment %} {{form.as_p}} {% endcomment %}
-
         <ul>
             <li> <span class="trail_name_display">Trail: {{trail.trail_name}}</span> </li>
             <li> <span class="trail_location_display">Location: {{trail.location}}</span> </li>
@@ -33,9 +31,9 @@
 
         <br />
         <br />
-
-        <input class="description" type="text" name="description" placeholder="Description of event"> 
-
+        
+        <input class="description" type="text" name="description" maxlength="300" size="4" placeholder="Description of event"> 
+        
         <br />
         <br />
 

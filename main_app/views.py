@@ -95,14 +95,23 @@ class TrailCategory(TemplateView):
 
 
 
-class FavTrails(TemplateView):
-    template_name = "user_favorite_trails.html"
+class FavTrails(View):
+    def get(self, request, pk):
+        return render(request, "user_favorite_trails.html")
 
+    def post(self, request, pk):
+        request.user.profile.trail_set.add(request.POST["trail_id"])
+        return redirect(f"/favtrails/{pk}")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["trail"] = Trail.objects.get(pk=self.kwargs["trail_pk"])
+        print(context)
+        return context
+        
     
 
-
-
-
+    
 
 
 class CreateCommunityEvent(CreateView):
@@ -131,11 +140,11 @@ class ViewCommunityEvent(DetailView):
     template_name = "view_event.html"
 
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["communityhike"] = CommunityHike.objects.all()
-        print(context)
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context["communityhike"] = CommunityHike.objects.all()
+    #     print(context)
+    #     return context
 
 
 

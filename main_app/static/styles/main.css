@@ -17,6 +17,10 @@
       box-sizing: border-box;
 }
 
+.container {
+    margin-top: 0;
+}
+
 body {
     background-color: var(--white);
     color: var(--darkblue);
@@ -438,9 +442,10 @@ ul {
 }
 
 .create_event_header h2 {
-    padding: 175px;
+    padding: 100px;
     text-align: center;
     color: var(--white);
+    margin-left: 200px;
 }
 
 
@@ -457,7 +462,9 @@ ul {
 .form_create_event {
     color: var(--white);
     font-size: 18px;
+    margin-bottom: 200px;
 }
+
 
 .form_create_event {
     text-align: center;
@@ -496,7 +503,7 @@ ul {
     left: 80px;
 }
 
-/* .list_of_fav_trails {
+.list_of_fav_trails {
     background-color: var(--white);
     padding: 15px;
     border-radius: 5px;
@@ -506,7 +513,8 @@ ul {
     width: 630px;
     height: 600px;
     overflow-y: scroll;
-} */
+    list-style: none;
+}
 
 .mountainlogo {
     position: relative;
@@ -520,3 +528,11 @@ ul {
 .view_info_list {
     margin-top: 500px;
 }
+
+.favtrailspage {
+    background: url("../images/guystandingonmtn.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+

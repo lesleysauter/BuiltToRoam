@@ -8,18 +8,20 @@
 <div class="view_event_info">
     <div class="view_info_list"></div>
     <ul>
-        <li> <span class="event_trail_name">{{ trail.trail_name }}</span> </li>
-        <li> <span class="event_location">{{ trail.location }}</span> </li>
-        <li> <span class="event_attendees">{{ communityhike.attendees }}</span> </li>
+        <li> <span class="event_trail_name">{{ communityhike.trail.trail_name }}</span> </li>
+        <li> <span class="event_location">{{ communityhike.trail.location }}</span> </li>
+        <li> <span class="event_attendees">{{ communityhike.attendees.count }}</span> </li>
         <li> <span class="event_date">{{ communityhike.date }}</span> </li>
         <li> <span class="event_time">{{ communityhike.time }}</span> </li>
         <li> <span class="event_description">{{ communityhike.desciption }}</span> </li>
                 
-                <form class="create_event" method="post">
+                {% comment %} <form class="create_event" action="{% url "deleteevent" communityhike.pk %}" method="post">
                 {% csrf_token %} {{form.errors}}
 
                 <input type="submit" value="Delete Event">
-                </form>
+                </form> {% endcomment %}
+
+                <a href="{% url "deleteevent" communityhike.pk %}">Delete Event</a>
     
     </ul>
     </div>
