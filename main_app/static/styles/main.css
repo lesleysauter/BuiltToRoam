@@ -503,12 +503,19 @@ ul {
     /* display: block; */
 }
 
+#submitevent:hover {
+    cursor: pointer;
+    background: var(--white);
+}
+
+
 .create_event ul {
     padding-top: 20px;
 }
 
 .description {
     padding: 100px;
+    text-align: left;
 }
 
 .form_create_event {
@@ -560,7 +567,6 @@ ul {
 }
 
 .container {
-    /* padding-top: 100px; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -568,15 +574,6 @@ ul {
     align-items: center;
 }
 
-/* 
-.map, .textinfo {
-    position: relative;
-    /* left: 150px; */
-/* } */
-
-/* .map {
-    left: 40px; 
-} */ 
 
 .list_of_fav_trails {
     background-color: var(--white);
@@ -593,9 +590,7 @@ ul {
 
 .mountainlogo {
     display: inline;
-
 }
-   
 
 .box-area a {
     margin-bottom: 100px;
@@ -606,9 +601,25 @@ ul {
 }
 
 .favtrailspage {
-    background: url("../images/guystandingonmtn.jpeg");
+    background: url("../images/favoritetrails.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.favoritetrailsheader {
+    color: var(--white);
+}
+
+.textinfo aside {
+    background: linear-gradient(
+        rgba(242, 240, 240, 0.1),
+        rgba(233, 226, 226, 0.1)
+    );
+    color: var(--white);
 }
 
