@@ -322,13 +322,11 @@ main {
 .userinputs {
     color: var(--darkblue);
     font-size: 25px;
-    margin-top: 300px;
     text-align: center;
     background: var(--white);
     width: 470px;
     padding: 25px;
     border-radius: 5px;     
-    margin-left: 700px;
 }
 
 
@@ -489,17 +487,24 @@ ul {
 }
 
 .create_event_header h2 {
-    padding: 100px;
+    padding: 80px;
+    margin-top: 100px;
+    font-size: 30px;
     text-align: center;
     color: var(--white);
-    margin-left: 200px;
 }
 
 
 .create_event input {
     text-align: left;
     font-size: 18px;
+    border-radius: 5px;
+    color: #206a5d;
     /* display: block; */
+}
+
+.create_event ul {
+    padding-top: 20px;
 }
 
 .description {
@@ -510,13 +515,19 @@ ul {
     color: var(--white);
     font-size: 18px;
     margin-bottom: 200px;
+    background: linear-gradient(
+    rgba(242, 240, 240, 0.1),
+    rgba(233, 226, 226, 0.1)
+    );
+    color: var(--white);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 
 .form_create_event {
     text-align: center;
-    margin-left: 250px;
-    margin-top: -300px;
 }
 
 .list_fav_trails {

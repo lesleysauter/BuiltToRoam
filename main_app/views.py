@@ -134,11 +134,8 @@ class ViewCommunityEvent(DetailView):
     template_name = "view_event.html"
 
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context["communityhike"] = CommunityHike.objects.all()
-    #     print(context)
-    #     return context
+# if CommunityHike is None:
+#     HttpResponse("No events for this trail yet")
 
 
 
