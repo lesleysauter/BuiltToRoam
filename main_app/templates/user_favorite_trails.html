@@ -43,7 +43,7 @@
                 center: [-74.5, 40], // starting position [lng, lat]
                 zoom: 9 // starting zoom
                 });
-                {% for trail in trails %}
+                {% for trail in user.profile.trail_set.all %}
                     new mapboxgl.Marker()
                     .setLngLat([{{trail.longitude}}, {{trail.latitude}}])
                     .setPopup(new mapboxgl.Popup().setHTML("Trail name goes here"))

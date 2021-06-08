@@ -122,10 +122,6 @@ nav a {
 }
 
 
-form {
-    padding-top: 300px;
-}
-
 input {
     padding: 12px;
 }
@@ -151,7 +147,7 @@ input {
     background-color: var(--white);
     width: 470px;
     padding: 30px;
-    margin-left: 510px;
+    /* margin-left: 510px; */
     border-radius: 5px; 
 }
 
@@ -183,7 +179,7 @@ input {
     background-color: var(--white);
     width: 470px;
     padding: 30px;
-    margin-left: 510px;
+    /* margin-left: 510px; */
     margin-top: 0;
     border-radius: 5px; 
 }
@@ -377,15 +373,12 @@ main {
     background-position: center center;
 }
 
-.traildetails {
-    margin-top: 300px;
-}
 
 .view_category_trails {
-    float: left;
+    /* float: left; */
     text-align: left;
     /* margin-top: -120px; */
-    margin-left: 180px;
+    /* margin-left: 180px; */
     color: var(--darkblue);
     background-color: var(--white);
     padding: 15px;
@@ -410,8 +403,8 @@ main {
 }
 
 .mapboxgl-map {
-    float: right;
-    margin-right: 300px;
+    /* float: right;
+    margin-right: 300px; */
     /* margin-top: -120px; */
 }
 
@@ -495,26 +488,34 @@ ul {
 
 .favorite_trails1, .traildetails {
     display: flex;
-    margin-top: 200px;
     position: relative;
-    justify-content: flex;
-    text-align: left;
-
-}
-
-.favorite_trails1 {
     justify-content: center;
-    margin-left: 300px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
 
+.container {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
 .map, .textinfo {
     position: relative;
     /* left: 150px; */
-}
+/* } */
 
-.map {
+/* .map {
     left: 40px; 
-}
+} */ 
 
 .list_of_fav_trails {
     background-color: var(--white);
@@ -529,10 +530,10 @@ ul {
     list-style: none;
 }
 
-.mountainlogo {
+/* .mountainlogo {
     position: relative;
     right: 570px;
-}
+} */
 
 .box-area a {
     margin-bottom: 100px;

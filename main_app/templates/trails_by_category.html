@@ -52,10 +52,14 @@
         <div id='map' style='width: 600px; height: 600px;'>
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoibGVzbGV5c2F1dGVyIiwiYSI6ImNrcDhuenN4dTBhNzMyeG54em81dGlxY2UifQ.k1YPnWFRXEvyyfYANmGajQ';
+                const center = {
+                    longitude: {{trails.0.longitude}},
+                    latitude: {{trails.0.latitude}}
+                }
                 var map = new mapboxgl.Map({
                 container: 'map', // container ID
                 style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
-                center: [-90.6833000000, 38.0838000000], // starting position [lng, lat]
+                center: [center.longitude, center.latitude], // starting position [lng, lat]
                 zoom: 9 // starting zoom
                 });
                 {% for trail in trails %}
