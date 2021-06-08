@@ -17,10 +17,6 @@
       box-sizing: border-box;
 }
 
-.container {
-    margin-top: 0;
-}
-
 body {
     background-color: var(--white);
     color: var(--darkblue);
@@ -367,6 +363,10 @@ main {
     background-repeat: no-repeat;
 }
 
+/* .infoheader {
+    margin-top: 600px
+} */
+
 
 /* trail category view page */
 
@@ -403,6 +403,10 @@ main {
     font-size: 15px;
     color: var(--white);
     display: inline;
+}
+
+#addtofavbtn {
+    padding-top: 0;
 }
 
 .mapboxgl-map {
@@ -498,9 +502,18 @@ ul {
 
 }
 
+.favorite_trails1 {
+    justify-content: center;
+    margin-left: 300px;
+}
+
 .map, .textinfo {
     position: relative;
-    left: 80px;
+    /* left: 150px; */
+}
+
+.map {
+    left: 40px; 
 }
 
 .list_of_fav_trails {

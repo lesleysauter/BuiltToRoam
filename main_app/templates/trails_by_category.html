@@ -13,22 +13,36 @@
         <aside class="view_category_trails">
             {% for trail in trails %}
                 <ul>
-                    <li> <span class="trail_name_display">Trail: {{trail.trail_name}}</span> </li>
-                    <li> <span class="trail_location_display">Location: {{trail.location}}</span> </li>
-                    <li> <span class="trail_length_display">Length: {{trail.length}}</span> </li>
-                    <li> <span class="trail_difficulty_display">Difficulty: {{trail.difficulty}}</span> </li>
+                    <li> Trail: {{trail.trail_name}} </li>
+                    <li> Location: {{trail.location}} </li>
+                    <li> Length: {{trail.length}} </li>
+                    <li> Difficulty: {{trail.difficulty}} </li>
                     <br />
                     {% if user.is_authenticated %}
-                    <li> <form action="{% url "favtrails" user.pk %}" method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="trail_id" value="{{ trail.pk }}">
-                        <input type="submit" value="Add to favorites">
-                    </form></li>
+                    <li> 
+                        <form id="addtofavbtn" action="{% url "favtrails" user.pk %}" method="post">
+                        {% csrf_token %}
+                            <input type="hidden" name="trail_id" value="{{ trail.pk }}">
+                            <input type="submit" value="Add to favorites">
+                        </form>
+                    </li>
+
                     <br />
-                    <li> <button><a href="{% url 'createevent' trail.pk %}">Create Event</a></button></li>
+
+                    <li> 
+                        <button> <a href="{% url 'createevent' trail.pk %}">Create Event</a> </button>
+                    </li>
+
                     {% endif %}
-                    <li> <button><a href="{% url 'viewevent' trail.pk %}">View events</a></button></li>
+
                     <br />
+
+                    <li> 
+                        <button> <a href="{% url 'viewevent' trail.pk %}">View events</a> </button>
+                    </li>
+
+                    <br />
+
                 </ul>
             {% endfor %}
         </aside>
