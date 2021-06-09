@@ -5,7 +5,7 @@
 <body class="vieweventpage">
     
 
-<h1 id="vieweventheader">View Event</h1>
+<h1 id="vieweventheader">View Your Event {{community_hike.trail}}</h1>
 
 
 <div class="view_event_info">
@@ -13,7 +13,7 @@
     <ul>
         <li> <span class="event_trail_name">Trail: {{ communityhike.trail.trail_name }}</span> </li>
         <li> <span class="event_location">Location: {{ communityhike.trail.location }}</span> </li>
-        <li> <span class="event_attendees">Attendees: {{ communityhike.attendees.count }}</span> </li>
+        {% comment %} <li> <span class="event_attendees">Attendees: {{ communityhike.attendees.count }}</span> </li> {% endcomment %}
         <li> <span class="event_date">Date: {{ communityhike.date }}</span> </li>
         <li> <span class="event_time">Time: {{ communityhike.time }}</span> </li>
         <li> <span class="event_description">Description: {{ communityhike.description }}</span> </li>
