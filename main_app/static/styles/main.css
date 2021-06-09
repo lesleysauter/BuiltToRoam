@@ -344,6 +344,7 @@ main {
 .inputfield input {
     width: 250px;
     font-size: 18px;
+    color: var(--darkblue);
 }
 
 .updateprofile {
@@ -354,15 +355,21 @@ main {
 }
 
 .submitchanges {
-    background: var(--white);
     font-size: 18px;
     text-align: center;
     border-color: #206a5d;
     border-style: solid;
     border-radius: 5px;
-    background-color: #206a5d;
-    color: var(--white);
+    background-color: var(--white);
+    color: #206a5d;;
     border-width: 4px;
+}
+
+.submitchanges:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background: #206a5d;
+    color: var(--white);
 }
 
 /* info page */
@@ -451,11 +458,32 @@ main {
     overflow-y: scroll;
 }
 
-.view_category_trails button {
+.view_category_trails li button a {
+    background-color: var(--white);
+    border-radius: 5px;
+    color: #206a5d;
     padding: 10px;
     font-size: 15px;
-    color: var(--white);
-    display: inline;
+}
+
+.view_category_trails li input {
+    background-color: var(--white);
+    color: #206a5d;
+    padding: 10px;
+    font-size: 15px; 
+    border-radius: 5px;
+}
+
+.view_category_trails li input:hover {
+    text-decoration: underline;
+}
+
+
+
+.view_category_trails button {
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
 }
 
 #addtofavbtn {
