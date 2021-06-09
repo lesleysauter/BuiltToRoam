@@ -65,7 +65,7 @@
                 {% for trail in trails %}
                     new mapboxgl.Marker()
                     .setLngLat([{{trail.longitude}}, {{trail.latitude}}])
-                    .setPopup(new mapboxgl.Popup().setHTML("Trail name goes here"))
+                    .setPopup(new mapboxgl.Popup().setHTML("{{trail.trail_name}}"))
                     .addTo(map);
                 {% endfor %}
             </script>
