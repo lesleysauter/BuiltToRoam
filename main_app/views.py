@@ -28,7 +28,10 @@ class Login(View):
             return redirect(f"home")
         
         else:
-            return HttpResponse("Unable to login!", content_type="text/plain")
+            context = {
+                "message": "Email or password is incorrect"
+            }
+            return render(request, "login.html", context)
 
     def get(self,request):
         return render(request, "login.html")
@@ -49,9 +52,12 @@ class Signup(View):
                 email = request.POST.get("email"),
                 )
             return redirect(f"customlogin")
+
         else:
-            print(request.POST, form.errors)
-            return HttpResponse("Unable to create profile, please try again.", content_type="text/plain")
+            context = {
+                "message": "There is an issue with your email or password confirmation"
+            }
+            return render(request, "registration/signup.html", context)
 
     def get(self, request):
         form = UserCreationForm()
@@ -102,6 +108,12 @@ class FavTrails(View):
     def post(self, request, pk):
         request.user.profile.trail_set.add(request.POST["trail_id"])
         return redirect(f"/favtrails/{pk}")
+
+
+
+class ShowTrail(DetailView):
+    model = Trail
+    template_name = "showtrail.html"
         
     
 
@@ -130,10 +142,6 @@ class CreateCommunityEvent(CreateView):
 class ViewCommunityEvent(DetailView):
     model = CommunityHike
     template_name = "view_event.html"
-
-
-# if CommunityHike is None:
-#     HttpResponse("No events for this trail yet")
 
 
 

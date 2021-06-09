@@ -3,31 +3,21 @@
 {% block content %}
 
 
-<body class="favtrailspage">
+<body class="showtrailpage">
     
 
-<h1 class="favoritetrailsheader">{{user.profile.first_name}}'s Favorited Trails</h1>
+<h1 class="showtrailsheader">{{trail.trail_name}} Community Events </h1>
 
-<div class="favorite_trails1">
+<div class="traildetails">
     <div class="textinfo">
         <aside class="list_of_fav_trails">
-            {% for trail in user.profile.trail_set.all %}
+            {% for community_hike in trail.community_hikes.all %}
 
-            <p>Name: {{trail.trail_name}}</p>
-            <p>Location: {{trail.location}}</p>
-            <p>Length: {{trail.length}}</p>
-            <p>Difficulty: {{trail.difficulty}}</p>
-            <p>Category: {{trail.category}}</p>
-
-            <br/>
-                <ul>
-                    <li> <button><a href="{% url 'showtrail' trail.pk %}">View events</a></button></li>
-                    <br />
-                    <li> <button><a href="{% url 'createevent' trail.pk %}">Create Event</a></button></li>
-                    <br />
-                </ul>
+            <p>Date: {{community_hike.date }}</p>
+            <p>Time: {{community_hike.time}}</p>
+            <p>Description: {{community_hike.description}}</p>
             <br />
-            <br /> 
+            <br />
             {% endfor %}
 
         </aside>
@@ -40,15 +30,15 @@
                 var map = new mapboxgl.Map({
                 container: 'map', // container ID
                 style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
-                center: [-74.5, 40], // starting position [lng, lat]
+                center: [{{trail.longitude}}, {{trail.latitude}}], // starting position [lng, lat]
                 zoom: 9 // starting zoom
                 });
-                {% for trail in user.profile.trail_set.all %}
+                
                     new mapboxgl.Marker()
                     .setLngLat([{{trail.longitude}}, {{trail.latitude}}])
                     .setPopup(new mapboxgl.Popup().setHTML("{{trail.trail_name}}"))
                     .addTo(map);
-                {% endfor %}
+                
             </script>
         </div>
     </div>

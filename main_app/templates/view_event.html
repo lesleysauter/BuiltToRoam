@@ -18,11 +18,7 @@
         <li> <span class="event_time">Time: {{ communityhike.time }}</span> </li>
         <li> <span class="event_description">Description: {{ communityhike.description }}</span> </li>
                 
-                {% comment %} <form class="create_event" action="{% url "deleteevent" communityhike.pk %}" method="post">
-                {% csrf_token %} {{form.errors}}
-
-                <input type="submit" value="Delete Event">
-                </form> {% endcomment %}
+                
 
                 <a href="{% url "deleteevent" communityhike.pk %}">Delete Event</a>
     

@@ -4,7 +4,11 @@
 {% block content %}
 
 <div class="banner-area">
+        {% if user.is_authenticated %}
+            <h2>Plan your next adventure, {{user.profile.first_name}}</h2>
+        {% else %}
             <h2>Plan your next adventure</h2>
+        {% endif %}
         </div>
         <div class="content-area">
             <div class="wrapper">
@@ -22,10 +26,7 @@
                     <p class="card__title text--medium">
                         <a class="category_link" href="{% url 'trailcategory' 'dog friendly' %}">Dog Friendly</a>
                     </p>
-                    {% comment %} <div class="card_info">
-                        <p class="text--medium">Text</p>
-                        <p class="card__text text--medium">Text</p>
-                    </div>  {% endcomment %}
+                    
                 </div>
             </div>
             <div class="card">

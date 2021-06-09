@@ -10,7 +10,7 @@
     <div class="loginform">
     
         <form method="post" action="{% url 'customlogin' %}">
-        {% csrf_token %} {{ form.errors }}
+        {% csrf_token %} {{ message }}
             
             <div class="boxmodel">
                 <h2>Log in to start planning your next adventure</h2>

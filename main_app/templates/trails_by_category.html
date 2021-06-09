@@ -2,7 +2,6 @@
 
 {% block content %}
 
-<h1> {{trail.category}} </h1>
 
 <body class="trail_category_page">
     
@@ -10,6 +9,7 @@
 
 <div class="traildetails">
     <div class="textinfo">
+        <h1> {{trail.category}} </h1>
         <aside class="view_category_trails">
             {% for trail in trails %}
                 <ul>
@@ -38,7 +38,7 @@
                     <br />
 
                     <li> 
-                        <button> <a href="{% url 'viewevent' trail.pk %}">View events</a> </button>
+                        <button> <a href="{% url 'showtrail' trail.pk %}">View events</a> </button>
                     </li>
 
                     <br />

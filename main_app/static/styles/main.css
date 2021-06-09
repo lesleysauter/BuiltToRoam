@@ -168,7 +168,6 @@ input {
     background-color: var(--white);
     width: 470px;
     padding: 30px;
-    /* margin-left: 510px; */
     border-radius: 5px; 
 }
 
@@ -250,8 +249,7 @@ main {
 }
 
 .category_link:hover {
-    background-color: #206a5d;
-    color: var(--white);
+    color: var(--darkblue);
     border-radius: 5px;
     padding: 5px;
 
@@ -426,11 +424,6 @@ main {
         );
 }
 
-/* .infoheader {
-    margin-top: 600px
-} */
-
-
 /* trail category view page */
 
 .trail_category_page {
@@ -463,14 +456,14 @@ main {
     border-radius: 5px;
     color: #206a5d;
     padding: 10px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .view_category_trails li input {
     background-color: var(--white);
     color: #206a5d;
     padding: 10px;
-    font-size: 15px; 
+    font-size: 18px; 
     border-radius: 5px;
 }
 
@@ -519,6 +512,14 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+textarea {
+    text-align: left;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #206a5d;
+    padding: 12px;
 }
 
 .create_event_header h2 {
@@ -594,7 +595,13 @@ ul {
     font-size: 18px;
     border-radius: 5px;
     color: #206a5d;
-    padding: 6px;
+    padding: 10px;
+}
+
+.list_of_fav_trails button {
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
 }
     
 .list_of_fav_trails button a:hover {
@@ -745,4 +752,15 @@ a:hover {
     transform: scale(1.1);
 }
 
+.showtrailpage {
+    background: url("../images/5314502.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.showtrailsheader {
+    color: var(--white);
+    padding: 10px;
+}
 
