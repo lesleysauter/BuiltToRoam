@@ -2,19 +2,22 @@
 
 {% block content %}
 
+<body class="deletepage">
+  
+<div class="deleteconfirm">
+  <h1>Are you sure you want to delete <br/ >
+  {{communityhike.trail.trail_name}} event?</h1>
 
-<h1>Are you sure you want to Delete {{communityhike.trail.trail_name}}?</h1>
+  <form method="post">
+    {% csrf_token %}  {{form.errors}}
+    
+      <input id="confirmbtn" type="submit" value="Confirm" />
+   
+  </form>
 
-<form method="post">
-  {% csrf_token %}
-  <div >
-    <!-- confirm artist delete -->
-    <input type="submit" value="Confirm" />
-    <!-- Redirect back to detail on cancel -->
-    {% comment %} <a href="{% url 'viewevent' trail.pk %}"> Cancel </a {% endcomment %}
-    {% comment %} > {% endcomment %}
-  </div>
-</form>
+</div>
+
+</body>
 
 
 {% endblock %}

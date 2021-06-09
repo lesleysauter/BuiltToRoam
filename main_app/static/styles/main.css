@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 :root {
     --white: #ffffff;
     --grey: #aaaaaa;
@@ -553,6 +560,22 @@ ul {
     overflow-y: scroll;
 }
 
+.list_of_fav_trails button a {
+    text-align: left;
+    background-color: var(--white);
+    font-size: 18px;
+    border-radius: 5px;
+    color: #206a5d;
+    padding: 6px;
+}
+    
+.list_of_fav_trails button a:hover {
+    cursor: pointer;
+    background: var(--white);
+}
+
+
+
 
 .favorite_trails1, .traildetails {
     display: flex;
@@ -588,23 +611,30 @@ ul {
     list-style: none;
 }
 
-.mountainlogo {
-    display: inline;
+.map {
+    padding: 10px;
 }
+
+/* .mountainlogo {
+    display: inline;
+} */
 
 .box-area a {
     margin-bottom: 100px;
 }
 
-.view_info_list {
-    margin-top: 500px;
-}
 
 .favtrailspage {
-    background: url("../images/favoritetrails.jpg");
+    background: url("../images/foresttrail2.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.list_of_fav_trails p {
+    padding: 6px;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 a:hover {
@@ -613,13 +643,78 @@ a:hover {
 
 .favoritetrailsheader {
     color: var(--white);
+    padding: 20px;
 }
 
 .textinfo aside {
     background: linear-gradient(
-        rgba(242, 240, 240, 0.1),
-        rgba(233, 226, 226, 0.1)
+        rgba(14, 13, 13, 0.721),
+        rgba(233, 226, 226, 0.29)
     );
     color: var(--white);
 }
+
+.vieweventpage {
+    background: url("../images/viewevent.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.view_event_info {
+    background: linear-gradient(
+        rgba(242, 240, 240, 0.571),
+        rgba(254, 253, 253, 0.820)
+    );
+    color: var(--darkblue);
+    padding: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.view_event_info li {
+    padding: 10px;
+
+}
+
+#vieweventheader {
+    color: var(--white);
+    padding-bottom: 30px;
+}
+
+
+.deletepage {
+    background: url("../images/deletepage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.deleteconfirm {
+    background: linear-gradient(
+        rgba(242, 240, 240, 0.571),
+        rgba(254, 253, 253, 0.214)
+    );
+    color: var(--white);
+    padding: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#confirmbtn {
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--darkblue);
+    font-size: 18px;
+}
+
+#confirmbtn:hover {
+    /* background-color: hsla(0, 0%, 100%, 0.1); */
+    cursor: pointer;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
 

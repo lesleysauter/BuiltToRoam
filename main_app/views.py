@@ -105,8 +105,6 @@ class FavTrails(View):
         
     
 
-    
-
 
 class CreateCommunityEvent(CreateView):
     model = CommunityHike
@@ -142,7 +140,7 @@ class ViewCommunityEvent(DetailView):
 class DeleteCommunityEvent(DeleteView):
     model = CommunityHike
     template_name = "event_delete_confirmation.html"
-    success_url = "/"
+    success_url = "favtrails/<int:pk>/"
 
 
 

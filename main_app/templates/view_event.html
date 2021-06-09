@@ -2,18 +2,21 @@
 
 {% block content %}
 
-<h1>View Event Page</h1>
+<body class="vieweventpage">
+    
+
+<h1 id="vieweventheader">View Event</h1>
 
 
 <div class="view_event_info">
     <div class="view_info_list"></div>
     <ul>
-        <li> <span class="event_trail_name">{{ communityhike.trail.trail_name }}</span> </li>
-        <li> <span class="event_location">{{ communityhike.trail.location }}</span> </li>
-        <li> <span class="event_attendees">{{ communityhike.attendees.count }}</span> </li>
-        <li> <span class="event_date">{{ communityhike.date }}</span> </li>
-        <li> <span class="event_time">{{ communityhike.time }}</span> </li>
-        <li> <span class="event_description">{{ communityhike.desciption }}</span> </li>
+        <li> <span class="event_trail_name">Trail: {{ communityhike.trail.trail_name }}</span> </li>
+        <li> <span class="event_location">Location: {{ communityhike.trail.location }}</span> </li>
+        <li> <span class="event_attendees">Attendees: {{ communityhike.attendees.count }}</span> </li>
+        <li> <span class="event_date">Date: {{ communityhike.date }}</span> </li>
+        <li> <span class="event_time">Time: {{ communityhike.time }}</span> </li>
+        <li> <span class="event_description">Description: {{ communityhike.description }}</span> </li>
                 
                 {% comment %} <form class="create_event" action="{% url "deleteevent" communityhike.pk %}" method="post">
                 {% csrf_token %} {{form.errors}}
@@ -26,5 +29,6 @@
     </ul>
     </div>
 </div>
+</body>
 
 {% endblock %}
