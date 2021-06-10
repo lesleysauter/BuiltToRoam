@@ -9,7 +9,7 @@
     <div class="signupform">
 
         <form class="signupfields" method="post" action="{% url 'signup' %}">
-            {% csrf_token %} {{ message }}
+            {% csrf_token %} <div class="errormessage">{{ message }}</div>
 
             <div class="boxmodel2">
                 <h2> Create your free account </h2>
