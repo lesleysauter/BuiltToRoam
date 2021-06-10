@@ -37,6 +37,7 @@ class Login(View):
         return render(request, "login.html")
 
 
+
 class Signup(View):
     def post(self, request):
         form = UserCreationForm(request.POST)
@@ -158,7 +159,6 @@ class Info(TemplateView):
 
 
             
-
 
 
 
