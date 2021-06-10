@@ -84,10 +84,7 @@ class UpdateProfile(View):
         profile.last_name = request.POST["last_name"]
         profile.email = request.POST["email"]
         profile.save()
-        return redirect(f"/profile/{pk}")
-
-        # if form.data['first_name', 'last_name', 'email'] is None:
-        #     return 
+        return redirect(f"/")
 
 
 
